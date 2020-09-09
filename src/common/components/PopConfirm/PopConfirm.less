@@ -1,0 +1,53 @@
+@import '../../styles/variables.less';
+
+.popConfirm {
+    position: absolute;
+    display: none;
+    background-color: white;
+    color: @textColor;
+    font-weight: normal;
+    border-radius: 3px;
+    padding: @blockPadding;
+    border: 1px solid @lightBorder;
+    width: max-content;
+    max-width: 20rem;
+
+    &__title {
+
+    }
+    &__content {
+
+    }
+    &__controlPanel {
+        display: flex;
+        justify-content: flex-end;
+        & > *:not(:last-child) {
+            margin-right: 5px;
+        }
+    }
+    &_visible {
+        z-index: 1;
+        display: block;
+    }
+    &_position {
+        &_bottom-right {
+            top: calc(100% + 5px);
+            left: calc(100% - 2rem);
+        }
+        &_bottom-left {
+            top: calc(100% + 5px);
+            left: 0;
+            transform: translate(calc(2rem - 100%), 0);
+        }
+        &_top-right {
+            top: 0;
+            transform: translate(0, calc(-5px - 100%));
+            left: calc(100% - 2rem);
+        }
+        &_top-left {
+            top: 0;
+            left: 0;
+            transform: translate(calc(2rem - 100%), calc(-5px - 100%));
+        }
+    }
+}

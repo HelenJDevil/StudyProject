@@ -1,0 +1,61 @@
+@import '../../styles/variables.less';
+
+.button {
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    transition: 0.2s;
+    border: none;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    padding: 1rem;
+    &_template {
+        &_main {
+        }
+        &_primary {
+            background: @green;
+            box-shadow: 0 -3px @greenShadow inset;
+
+            &:hover { background: @greenShadow; }
+            &:active {
+                background: @greenActive;
+                box-shadow: 0 3px @greenActive inset;
+            }
+        }
+        &_dangerous {
+            background: @red;
+            box-shadow: 0 -3px @redShadow inset;
+
+            &:hover { background: @redShadow; }
+            &:active {
+                background: @redActive;
+                box-shadow: 0 3px @redActive inset
+            }
+        }
+    }
+    &_size {
+        &_small {
+            height: 1.5rem;
+        }
+        &_middle {
+            height: 2rem;
+        }
+        &_big {
+            height: 3rem;
+        }
+        &_adaptive {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &_disabled {
+        opacity: 0.65;
+        cursor: not-allowed;
+    }
+}

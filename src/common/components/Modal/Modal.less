@@ -1,0 +1,15 @@
+@import '../../styles/variables.less';
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    &__header {
+        flex-shrink: 0;
+    }
+    &__body {
+        flex-grow: 1;
+        shrink: 1;
+        overflow: auto;
+        padding: @blockPadding;
+    }
+}

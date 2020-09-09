@@ -1,0 +1,36 @@
+@import '../../styles/variables.less';
+
+.table {
+    background-color: #f5ffff;
+    border-collapse: collapse;
+    text-align: left;
+    width: calc(100% - 1px);
+    &__wrapper {
+        overflow: auto;
+    }
+    &__emptyBlock {
+        padding: @blockPadding;
+    }
+
+    &__cell {
+        border: 1px solid #e3eef7;
+        padding: 10px 15px;
+        position: relative;
+        transition: all 0.5s ease;
+        &_actions {
+            white-space: nowrap;
+        }
+    }
+
+    &__row {
+        &:nth-child(odd) {
+            background-color: #ebf3f9;
+        }
+        &:hover:not(&_checked) td {
+            background-color: inherit @lightSelection;
+        }
+        &_checked td {
+            background-color: @selection;
+        }
+    }
+}

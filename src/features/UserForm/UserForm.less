@@ -1,0 +1,23 @@
+@import '../../common/styles/variables.less';
+
+.userForm {
+    &__label {
+        display: block;
+        padding: @blockPadding;
+    }
+    &__field {
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        font-size: 14px;
+        &_error {
+            border-color: @red;
+            &:focus {
+                outline-color: @redShadow;
+            }
+        }
+    }
+    &__saver {
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,25 @@
+.paginatedComponent {
+    & > * {
+        width: 100%;
+    }
+    &__controlPanel {
+        margin: 0.5rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__childControls {
+        display: flex;
+        flex-wrap: nowrap;
+        & > *:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+    &__pagination {
+        display: flex;
+        align-items: center;
+        & > * {
+            margin: 0 5px
+        }
+    }
+}
