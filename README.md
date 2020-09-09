@@ -2,43 +2,43 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-In the project directory, you can run:
+Запустите приложение с помощью команды:
 
 ### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Запускает приложение в режиме разработки.<br />
+Откройте [http://localhost:3000](http://localhost:3000) в браузере для просмотра.
+По умолчанию страница открывается автоматически при запуске.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Реализация
+Бэкэнд не реализован, данные хранятся локально, имитируется работа с апи.
+Для резапуска приложения (сброса изменений) обновите страницу. 
 
-### `npm test`
+## Задание
+Реализовать функционал отображения / добавления / редактирование пользователей. Пользователь имеет следующие поля:
+* Фамилия
+* Имя
+* Отчество
+* Организация
+* E-mail
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+При том организации представлены отдельным списком.
 
-### `npm run build`
+Реализация бекенда для хранения данных не обязательна.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Главная страница содержит кнопку Добавить пользователя и таблицу с существующими пользователями.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Требования к таблице:
+* Каждая строка таблицы имеет кнопки редактирования и удаления пользователя.
+* При удалении пользователя показывается диалог подтверждения удаления. 
+* При щелчке на строку таблицы, она должна выделятся цветом.
+* Таблица должна иметь паджинатор (по умолчанию, паджинация по 10 строк).
+* Название организации - кратное название (shortName).
+* Должна быть возможность множественного удаления записей.
+* При удалении записи необходимо выводить окно подтверждения.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Требования к диалогу:
+* В заголовке необходимо уточнить, это диалог создание или редактирование пользователя.
+* Необходима валидация полей (все поля обязательные, кроме отчества).
+* Организации — это список существующих организаций с названием в формате: fullName (shortName).
+* При создании пользователя, организация не должна быть выбрана.
